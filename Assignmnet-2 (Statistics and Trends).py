@@ -66,3 +66,15 @@ print('\nPearsons Correlation:\n',correlation.corr())
 
 #Calculating the Kendalls Correlation for Australia's Population Growth
 print('\nKendalls Correlation:\n',correlation.corr(method='kendall'))
+
+#plotting a line graph between two indicators: Denmark's Renewable energy consumption 
+#(% of total final energy consumption) and Renewable electricity output (% of total electricity output)
+plt.figure(figsize=(15,10))
+plt.rcParams.update({'font.size': 17})
+plt.plot(df_countries.iloc[356,35:50],label='Renewable energy consumption (% of total energy consumption)')
+plt.plot(df_countries.iloc[359,35:50],label='Renewable energy production (% of total energy production)')
+plt.title('Electricity Supply & Demand for Denmark',fontsize=23)
+plt.xlabel('Time Period',fontsize=25)
+plt.ylabel('Energy Levels',fontsize=25)
+plt.legend(fontsize=16)
+plt.show()
