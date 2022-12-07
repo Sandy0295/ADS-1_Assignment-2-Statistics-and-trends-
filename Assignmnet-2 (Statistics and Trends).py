@@ -57,3 +57,12 @@ print('\n\nKurtosis:',st.kurtosis(df_countries.iloc[10,4:]))
 
 #printing the statistical property "Skewness" using scipy module
 print('\nSkewness:',st.skew(df_countries.iloc[8,4:]))
+
+#extracting the data for Australia's Population Growth
+correlation=df_countries.iloc[4:,60:65]
+
+#Calculating the Pearsons Correlation for Australia's Population Growth
+print('\nPearsons Correlation:\n',correlation.corr())
+
+#Calculating the Kendalls Correlation for Australia's Population Growth
+print('\nKendalls Correlation:\n',correlation.corr(method='kendall'))
