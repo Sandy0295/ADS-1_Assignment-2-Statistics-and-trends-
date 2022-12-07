@@ -53,8 +53,10 @@ print('\nCalculating Standard Deviation of "Annual freshwater withdrawals, total
 print('-----------------------------------------------------------------------------------------------------------------')
 print(np.std(df_years.iloc[5:,[19,95,171,247,323]]))
 
-#printing the statistical property "describe" using pandas module (using the dataframe)
-print('\n\nDescribe:\n',df_years.iloc[4:,10:20].describe())
+#printing "describe" using pandas module (using the dataframe) for 5 countries
+print('\nCalculating Describe of "Total greenhouse gas emissions (% change from 1990)" for 5 countries')
+print('-----------------------------------------------------------------------------------------------')
+print(df_years.iloc[4:,[34,110,186,262,338]].describe())
 
 #printing the statistical property "kurtosis" using scipy module
 print('\n\nKurtosis:',st.kurtosis(df_countries.iloc[10,4:]))
