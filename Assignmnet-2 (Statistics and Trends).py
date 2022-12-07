@@ -34,7 +34,6 @@ def read_data_file(input_file_name,countries):
     header = transposed_dataFrame.iloc[0].values.tolist()
     #assigning the header to the transposed data frame
     transposed_dataFrame.columns = header
-    #transposed_dataFrame = transposed_dataFrame.iloc[0:]
     #assigning the transposed dataframe with years as first column to a new variable
     dataFrame_years = transposed_dataFrame
     print('Transposed DataFrame:\n',dataFrame_years)
@@ -49,3 +48,6 @@ print('Mean:\n',np.mean(df_years.iloc[4:,10:20]))
 
 #printing the statistical property "standard deviation" using numpy module
 print('\n\nStandard Deviation:\n',np.std(df_years.iloc[5:,10:20]))
+
+#printing the statistical property "describe" using pandas module (using the dataframe)
+print('\n\nDescribe:\n',df_years.iloc[4:,10:20].describe())
