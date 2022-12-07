@@ -46,3 +46,6 @@ df_countries,df_years = read_data_file('API_19_DS2_en_csv_v2_4700503-Copy.csv',[
 
 #printing the statistical property "mean" using numpy module
 print('Mean:\n',np.mean(df_years.iloc[4:,10:20]))
+
+#printing the statistical property "standard deviation" using numpy module
+print('\n\nStandard Deviation:\n',np.std(df_years.iloc[5:,10:20]))
