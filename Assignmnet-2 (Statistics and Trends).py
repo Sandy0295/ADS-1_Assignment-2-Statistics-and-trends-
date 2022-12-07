@@ -78,3 +78,13 @@ plt.xlabel('Time Period',fontsize=25)
 plt.ylabel('Energy Levels',fontsize=25)
 plt.legend(fontsize=16)
 plt.show()
+
+#print(df_c.iloc[232,56:66])
+#plotting a pie chart for one indicator: switzerland's Population Total between 2012 & 2021.
+plt.figure(figsize=(20,20))
+plt.rcParams.update({'font.size': 22.5})
+time_period = ['2012','2013','2014','2015','2016','2017','2018','2019','2020','2021']
+plt.pie(df_countries.iloc[232,56:66],labels=time_period,autopct='%1.1f%%',pctdistance=0.8,labeldistance=1.02)
+plt.title('Total Population of Switzerland',fontsize=35)
+plt.legend(loc='lower left')
+plt.show()
