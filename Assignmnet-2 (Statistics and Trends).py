@@ -58,8 +58,12 @@ print('\nCalculating Describe of "Total greenhouse gas emissions (% change from 
 print('-----------------------------------------------------------------------------------------------')
 print(df_years.iloc[4:,[34,110,186,262,338]].describe())
 
-#printing the statistical property "kurtosis" using scipy module
-print('\n\nKurtosis:',st.kurtosis(df_countries.iloc[10,4:]))
+#printing "kurtosis" for an indicator(Community health workers (per 1,000 people)) using scipy module
+print('\n\nBelow Kurtosis values are calculated for an indicator:Community health workers (per 1,000 people)')
+print('----------------------------------------------------------------------------------------------------')
+print('Kurtosis of Australia:',st.kurtosis(df_countries.iloc[10,4:]))
+print('Kurtosis of Bolivia:',st.kurtosis(df_countries.iloc[84,4:]))
+print('Kurtosis of Canada:',st.kurtosis(df_countries.iloc[160,4:]))
 
 #printing the statistical property "Skewness" using scipy module
 print('\nSkewness:',st.skew(df_countries.iloc[8,4:]))
