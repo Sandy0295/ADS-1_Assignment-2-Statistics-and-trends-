@@ -41,3 +41,5 @@ def read_data_file(input_file_name,countries):
     #returning the 2 dataframes (one dataframe with countries as first column and other dataframe with years as first column)
     return dataFrame_countries,dataFrame_years
 
+#calling the function with the data set and our own selection of countries.
+df_countries,df_years = read_data_file('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Australia','Bolivia','Canada','Switzerland','Denmark'])
