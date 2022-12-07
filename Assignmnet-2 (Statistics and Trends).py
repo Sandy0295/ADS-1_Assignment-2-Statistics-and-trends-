@@ -54,3 +54,6 @@ print('\n\nDescribe:\n',df_years.iloc[4:,10:20].describe())
 
 #printing the statistical property "kurtosis" using scipy module
 print('\n\nKurtosis:',st.kurtosis(df_countries.iloc[10,4:]))
+
+#printing the statistical property "Skewness" using scipy module
+print('\nSkewness:',st.skew(df_countries.iloc[8,4:]))
