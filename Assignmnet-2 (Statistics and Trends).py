@@ -48,8 +48,10 @@ print('Calculating Mean of "Nitrous oxide emissions (% change from 1990)" for 5 
 print('----------------------------------------------------------------------------------')
 print(np.mean(df_years.iloc[4:,[29,105,181,257,333]]))
 
-#printing the statistical property "standard deviation" using numpy module
-print('\n\nStandard Deviation:\n',np.std(df_years.iloc[5:,10:20]))
+#printing "standard deviation" using numpy module for 5 countries
+print('\nCalculating Standard Deviation of "Annual freshwater withdrawals, total (billion cubic meters)" for 5 countries')
+print('-----------------------------------------------------------------------------------------------------------------')
+print(np.std(df_years.iloc[5:,[19,95,171,247,323]]))
 
 #printing the statistical property "describe" using pandas module (using the dataframe)
 print('\n\nDescribe:\n',df_years.iloc[4:,10:20].describe())
