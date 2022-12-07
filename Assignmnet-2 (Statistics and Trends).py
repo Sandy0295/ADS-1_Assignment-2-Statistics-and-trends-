@@ -79,7 +79,6 @@ plt.ylabel('Energy Levels',fontsize=25)
 plt.legend(fontsize=16)
 plt.show()
 
-#print(df_c.iloc[232,56:66])
 #plotting a pie chart for one indicator: switzerland's Population Total between 2012 & 2021.
 plt.figure(figsize=(20,20))
 plt.rcParams.update({'font.size': 22.5})
