@@ -44,7 +44,7 @@ def read_data_file(input_file_name,countries):
 df_countries,df_years = read_data_file('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Australia','Bolivia','Canada','Switzerland','Denmark'])
 
 #printing "mean" using numpy module for 5 countries
-print('Calculating Mean of "Nitrous oxide emissions (% change from 1990)" for 5 countries')
+print('\nCalculating Mean of "Nitrous oxide emissions (% change from 1990)" for 5 countries')
 print('----------------------------------------------------------------------------------')
 print(np.mean(df_years.iloc[4:,[29,105,181,257,333]]))
 
