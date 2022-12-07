@@ -65,8 +65,12 @@ print('Kurtosis of Australia:',st.kurtosis(df_countries.iloc[10,4:]))
 print('Kurtosis of Bolivia:',st.kurtosis(df_countries.iloc[84,4:]))
 print('Kurtosis of Canada:',st.kurtosis(df_countries.iloc[160,4:]))
 
-#printing the statistical property "Skewness" using scipy module
-print('\nSkewness:',st.skew(df_countries.iloc[8,4:]))
+#printing "Skewness" for an indicator(Methane emissions (% change from 1990)) using scipy module
+print('\n\nBelow Skewness values are calculated for an indicator:Methane emissions (% change from 1990)')
+print('------------------------------------------------------------------------------------------------')
+print('Skewness of Australia:',st.skew(df_countries.iloc[31,4:]))
+print('Skewness of Bolivia:',st.skew(df_countries.iloc[107,4:]))        
+print('Skewness of Canada:',st.skew(df_countries.iloc[183,4:]))
 
 #extracting the data for Australia's Population Growth
 correlation=df_countries.iloc[4:,60:65]
