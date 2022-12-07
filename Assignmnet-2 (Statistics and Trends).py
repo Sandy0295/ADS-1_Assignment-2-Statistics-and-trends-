@@ -43,3 +43,6 @@ def read_data_file(input_file_name,countries):
 
 #calling the function with the data set and our own selection of countries.
 df_countries,df_years = read_data_file('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Australia','Bolivia','Canada','Switzerland','Denmark'])
+
+#printing the statistical property "mean" using numpy module
+print('Mean:\n',np.mean(df_years.iloc[4:,10:20]))
