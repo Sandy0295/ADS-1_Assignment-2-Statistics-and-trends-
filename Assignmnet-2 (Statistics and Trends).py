@@ -51,3 +51,6 @@ print('\n\nStandard Deviation:\n',np.std(df_years.iloc[5:,10:20]))
 
 #printing the statistical property "describe" using pandas module (using the dataframe)
 print('\n\nDescribe:\n',df_years.iloc[4:,10:20].describe())
+
+#printing the statistical property "kurtosis" using scipy module
+print('\n\nKurtosis:',st.kurtosis(df_countries.iloc[10,4:]))
