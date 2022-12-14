@@ -72,13 +72,13 @@ print('Skewness of Australia:',st.skew(df_countries.iloc[31,4:]))
 print('Skewness of Bolivia:',st.skew(df_countries.iloc[107,4:]))        
 print('Skewness of Canada:',st.skew(df_countries.iloc[183,4:]))
 
-#extracting the data for Australia's Population Growth
-correlation=df_countries.iloc[4:,60:65]
+#extracting the data for few indicators of Australia and Bolivia to find the correlation
+correlation=df_countries.iloc[[29,31,34,36,38,43,47,105,259,262,264],4:11]
 
-#Calculating the Pearsons Correlation for Australia's Population Growth
+#Calculating the Pearsons Correlation for the extracted indicators of Australia and Bolivia
 print('\nPearsons Correlation:\n',correlation.corr())
 
-#Calculating the Kendalls Correlation for Australia's Population Growth
+#Calculating the Kendalls Correlation for the extracted indicators of Australia and Bolivia
 print('\nKendalls Correlation:\n',correlation.corr(method='kendall'))
 
 #plotting a line graph between two indicators: Denmark's Renewable energy consumption 
@@ -100,4 +100,35 @@ time_period = ['2012','2013','2014','2015','2016','2017','2018','2019','2020','2
 plt.pie(df_countries.iloc[232,56:66],labels=time_period,autopct='%1.1f%%',pctdistance=0.8,labeldistance=1.02)
 plt.title('Total Population of Switzerland',fontsize=35)
 plt.legend(loc='lower left')
+plt.show()
+
+#plotting a line graph for the mean values calculated for 5 different countries.
+plt.figure(figsize=(40,40))
+plt.rcParams.update({'font.size':60})
+plt.plot(np.mean(df_years.iloc[4:,[29,105,181,257,333]]), label='Nitrous oxide emission', linewidth=20)
+plt.title('Average nitrous oxide emission levels')
+plt.xlabel('Countries',fontsize=60)
+plt.ylabel('Mean of Nitrous oxide emissions', fontsize=60)
+plt.legend()
+plt.show()
+
+#plotting heatmap for the correlation values that we calculated above for few indicators.
+plt.figure(figsize = (15,15))
+heat_map=plt.imshow(correlation.corr(),aspect='auto')
+range_bar=plt.colorbar(heat_map)
+range_bar.set_label('Correlation Range',fontsize=50)
+plt.xticks([0,1,2,3,4,5,6], ['Nitrous oxide emissions',
+                             'Methane emissions', 
+                             'Total greenhouse gas emissions', 
+                             'Other greenhouse gas emissions', 
+                             'CO2 emissions from solid fuel consumption',
+                             'CO2 emissions from liquid fuel consumption', 
+                             'CO2 emissions from gaseous fuel consumption'],rotation=90,fontsize=30)
+plt.yticks([0,1,2,3,4,5,6], ['Nitrous oxide emissions',
+                             'Methane emissions', 
+                             'Total greenhouse gas emissions', 
+                             'Other greenhouse gas emissions', 
+                             'CO2 emissions from solid fuel consumption',
+                             'CO2 emissions from liquid fuel consumption', 
+                             'CO2 emissions from gaseous fuel consumption'],fontsize=30)
 plt.show()
